@@ -1,0 +1,28 @@
+.summary {
+  height: 100%;
+  width: 100%;
+}
+.summary-text {
+  text-anchor: end;
+}
+.summary-units {
+  text-anchor: start;
+}
+.system-header {
+  display: flex;
+  flex-direction: column;
+  margin-left: 75px;
+  margin-right: 45px;
+}
+.system-header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.graph-text {
+  text-anchor: middle;
+}
+
+.graph-value {
+  filter: brightness(2);
+}
