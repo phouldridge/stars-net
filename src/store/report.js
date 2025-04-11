@@ -2,10 +2,7 @@ import { createSelector, createSlice } from '@reduxjs/toolkit'
 import _ from 'underscore'
 import { getSelectedSystem } from './select'
 
-export const getYear = state => {
-  console.log(' *** getYear:', state)
-  return state.report.report.year
-}
+export const getYear = state => state.report.report.year
 export const getSystemReport = (state, id) => _.find(state.report.report.systems, system => system.id === id)
 export const getHomeSystem = state => state.report.report.systems[0]
 export const getSystems = state => state.report.report.systems
