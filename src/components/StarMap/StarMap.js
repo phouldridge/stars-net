@@ -89,7 +89,7 @@ const StarMap = () => {
 
   return (
     <div className="panel">
-      <div className="map">
+      <div className="map-container">
         <svg viewBox="0 0 600 600" width="600" height="600" strokeWidth={1}>
           {options.showScanners && <SystemScanners />}
           <StarField />

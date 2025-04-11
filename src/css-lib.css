@@ -22,19 +22,15 @@
   --space-color: #223333;
   --scanner-color: #820000; /*#cf1300;*/
 }
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 10px;
   font-weight: 500;
   background: silver;
 }
-
 svg {
   transform: translate(0, 0);
 }
-
-.home-page,
 .game-container {
   width: 100%;
   height: 100%;
@@ -42,43 +38,6 @@ svg {
   overflow-y: auto;
   overflow-x: hidden;
 }
-
-.home-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.game-title {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 184px;
-  color: #555; /* Darker metallic color */
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5), /* Darker shadow */ 0 0 10px rgba(0, 0, 0, 0.5),
-    /* Darker shadow */ 0 0 15px rgba(0, 0, 0, 0.5), /* Darker shadow */ 0 0 20px rgba(0, 0, 0, 0.5),
-    /* Darker shadow */ 0 0 25px rgba(0, 0, 0, 0.5), /* Darker shadow */ 0 0 30px rgba(0, 0, 0, 0.5),
-    /* Darker shadow */ 0 0 35px rgba(0, 0, 0, 0.5), /* Darker shadow */ 0 0 40px #222,
-    /* Even darker shadow color */ 0 0 45px #222, /* Even darker shadow color */ 0 0 50px #222; /* Even darker shadow color */
-  background: linear-gradient(90deg, #333, #666); /* Darker metallic gradient */
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-.login-container {
-  border: var(--space-color);
-  border-width: 1px;
-  align-self: flex-end;
-  justify-self: end;
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-}
-.flex-field {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .column-container {
   display: flex;
   flex-direction: column;
@@ -105,14 +64,6 @@ svg {
   border: solid 0.5px;
 }
 .map-container {
-  display: flex;
-  flex-grow: 2;
-  flex-direction: column;
-  padding: 3px;
-  height: 100%;
-  width: 100%;
-}
-.map {
   position: relative;
   background: black;
   overflow: auto;
@@ -137,7 +88,6 @@ svg {
 .off {
   border: outset 1px;
 }
-
 .star-text {
   fill: white;
   text-anchor: middle;
@@ -147,38 +97,32 @@ svg {
 }
 .star-svg {
   cursor: arrow;
-  user-select: none;
+  cursor: pointer;
 }
-
 .panel {
   border: outset 1px;
   margin: 3px;
   padding: 3px;
   min-width: 175px;
 }
-
 .panel-title {
   display: flex;
   flex-direction: row;
 }
-
 .panel-title-text {
   text-align: center;
   flex-grow: 1;
   border: 1px outset;
   padding: 2px;
 }
-
 .item-line {
   display: flex;
   flex-direction: row;
   padding: 0px 3px;
 }
-
 .item-text {
   flex-grow: 1;
 }
-
 .item-text:disabled {
   color: gray;
 }
@@ -224,14 +168,12 @@ svg {
   margin: 3px;
   padding: 3px;
 }
-
 .message-text {
   border: 1px inset;
   padding: 2px;
   margin-top: 3px;
   flex: 1;
 }
-
 div[aria-label='collapse']:hover {
   background: #aaa;
 }
@@ -243,7 +185,6 @@ div[aria-label='collapse'] {
   box-shadow: 0px;
   width: fit-content;
 }
-
 select {
   background: silver;
   border: 1px outset;
@@ -254,11 +195,9 @@ select {
   padding: 0.25em;
   width: 100%;
 }
-
 option {
   border-radius: 0px;
 }
-
 button {
   background: silver;
   border: 1px solid #404040;
@@ -270,33 +209,51 @@ button {
   padding: 0.25em 1em;
   width: 72px;
 }
-
 button:hover {
   background: #aaa;
   color: #444;
 }
-
 button:focus {
   background: darkgray;
 }
-
 button:active {
   background: gray;
 }
-
 button:disabled {
   color: gray;
   background: #c0c0c0;
   border: 1px solid #aaaaaa;
 }
-
 button:default {
   background: blue;
   color: white;
 }
-
 hr {
   display: block;
   border: 1px outset;
   margin: 3px;
+}
+div {
+  scrollbar-width: thin;
+  scrollbar-color: grey transparent;
+}
+div::-webkit-scrollbar {
+  width: 16px;
+}
+div::-webkit-scrollbar-track {
+  width: 16px;
+  background-color: transparent;
+  overflow-y: overlay !important;
+}
+div::-webkit-scrollbar-thumb {
+  border-radius: 24px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+  background-color: grey;
+  min-height: 24px;
+}
+div::-webkit-scrollbar-thumb:hover {
+  border-radius: 16px;
+  border: 6px solid transparent;
+  transition: background-color 0.2s linear, width 0.2s ease-in-out;
 }
