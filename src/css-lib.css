@@ -7,6 +7,7 @@
   overflow: hidden;
   z-index: -1;
   padding: 3px;
+  user-select: none;
   --ironium-color: #000fff;
   --boranium-color: #00a300;
   --germanium-color: #ffef00;
