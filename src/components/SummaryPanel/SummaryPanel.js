@@ -6,7 +6,7 @@ import './summary.css'
 import { getTolerances } from 'store/race'
 import useDims from 'hooks/useDims'
 import { useRef } from 'react'
-import { getSystemReport, getReportYear } from 'store/report'
+import { getSystemReport, getYear } from 'store/report'
 import { LineItem } from 'components/Panel/Panel'
 import { getSelectedSystem } from 'store/select'
 import { getStar } from 'store/systems'
@@ -178,7 +178,7 @@ const ResourceGraph = ({ system, width, disabled }) => {
 }
 
 const SystemHeader = ({ system, disabled }) => {
-  const year = useSelector(getReportYear)
+  const year = useSelector(getYear)
   const age = year - system?.reportDate
   return (
     <div className="system-header">

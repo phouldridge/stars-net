@@ -1,0 +1,29 @@
+.group-box {
+  border: 2px groove; /* Border for the box */
+  border-radius: 1px; /* Rounded corners */
+  position: relative; /* Positioning for the title */
+  padding: 4px; /* Padding for the content */
+  margin: 6px 4px 4px; /* Margin around the box */
+}
+
+.group-box-title {
+  position: absolute; /* Position the title absolutely */
+  top: -9px; /* Adjust the position above the box */
+  left: 8px; /* Align the title with the content */
+  background-color: #cccccc; /* Background color for the title */
+  padding: 0 2px; /* Padding for the title */
+  font-weight: bold; /* Bold text for the title */
+  color: #333; /* Text color */
+}
+
+.group-box-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-item {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  margin: 1px 4px 1px 4px;
+}

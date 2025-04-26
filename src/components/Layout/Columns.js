@@ -3,8 +3,8 @@ import { useRef } from 'react'
 
 import './Columns.css'
 
-export const Column = ({ width, children }) => {
-  return <div>{children}</div>
+export const Column = ({ style, children }) => {
+  return <div style={style}>{children}</div>
 }
 const RowItem = ({ width, children }) => {
   const style = { width }

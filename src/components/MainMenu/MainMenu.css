@@ -1,0 +1,23 @@
+.main-menu {
+  display: flex;
+  flex-direction: row;
+}
+/* .main-menu-item {
+} */
+.dropdown-menu {
+  position: absolute;
+  background-color: #cccccc;
+  border: 1px solid black;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 4px;
+}
+/* .dropdown-menu {} */
+.active-menu-item {
+  color: white;
+  background-color: #000082;
+  padding: 2px 5px;
+}
+.inactive-menu-item {
+  padding: 2px 5px;
+}

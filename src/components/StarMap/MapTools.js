@@ -1,3 +1,5 @@
+import ToggleButton from 'components/ToggleButton'
+import ToggleButtonGroup from 'components/ToggleButtonGroup'
 import TurnSimulator from 'components/TurnSimulator'
 const { useDispatch, useSelector } = require('react-redux')
 const { getOptions, toggleOption } = require('store/options')
@@ -45,14 +47,30 @@ const ToggleOption = ({ option, icon }) => {
   )
 }
 
+const overlayButtons = [
+  { index: 7, tooltip: 'Scanner Coverage Overlay' },
+  { index: 8, tooltip: 'Mine Fields Overlay' },
+  { index: 9, tooltip: 'Fleet Paths Overlay' },
+  { index: 10, tooltip: 'Planet Names Overlay' },
+  { index: 11, tooltip: 'Ship Counts Overlay' }
+]
+
 const MapTools = () => {
-  const icon = { name: 'Abc', location: { x: 10, y: 5 } }
   return (
     <div className="panel">
       <div className="map-tools">
-        <ToggleOption option="showNames" icon={<StarSvg star={icon} options={{ showNames: true }} isButton={true} />} />
-        <ToggleOption option="showScanners" icon={<ScannerIcon />} />
-        <TurnSimulator />
+        <ToggleButtonGroup />
+        <ToggleButton index={6} />
+        {overlayButtons.map(({ index, tooltip }) => (
+          <ToggleButton key={index} index={index} tooltip={tooltip} />
+        ))}
+        <ToggleButton index={12} />
+        <ToggleButton index={13} />
+        <ToggleButton index={14} />
+        <ToggleButton index={15} />
+        {/* <ToggleOption option="showNames" icon={<StarSvg star={icon} options={{ showNames: true }} isButton={true} />} />
+        <ToggleOption option="showScanners" icon={<ScannerIcon />} /> */}
+        {/* <TurnSimulator /> */}
       </div>
     </div>
   )

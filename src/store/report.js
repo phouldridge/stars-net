@@ -10,7 +10,6 @@ export const getFleets = state => state.report.fleets
 export const getFleetsInOrbit = createSelector([getSelectedSystem, getFleets], (systemName, fleets) =>
   _.filter(fleets, fleet => fleet.inOrbit === systemName)
 )
-export const getReportYear = state => state.report.report.year
 
 const initialState = {
   report: {}

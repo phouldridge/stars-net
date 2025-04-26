@@ -1,0 +1,119 @@
+.ship-designer {
+  background-color: #cccccc;
+}
+
+.designer-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.designer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 328px;
+  height: 425px;
+  margin: 6px;
+}
+
+.hull-layout {
+  width: 324px;
+  height: 324px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  /* border: 1px solid black; */
+}
+
+.cargo-tile {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-image: url('images/cargo-back.png');
+  background-repeat: repeat;
+}
+
+.dock-tile {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-image: url('images/dock-back.png');
+  background-repeat: repeat;
+}
+
+.circle-tile {
+  position: relative; /* Position relative for the pseudo-element */
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Hide overflow to keep the circle within the square */
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center text */
+  color: black; /* Text color */
+}
+
+.circle-tile::before {
+  content: ''; /* Required for the pseudo-element */
+  position: absolute; /* Position absolute to overlay on the square */
+  top: 14.5%; /* Align to the top */
+  left: 14.5%; /* Align to the left */
+  width: 70%; /* Full width of the square */
+  height: 70%; /* Full height of the square */
+  border-radius: 50%; /* Make it circular */
+  border: 1px solid black; /* 1 pixel circular border */
+  background: url('images/dock-back.png'); /* Set the patterned background */
+  background-repeat: repeat;
+  /* background-size: cover; Cover the entire area */
+  z-index: 1; /* Ensure it is above the background */
+}
+
+.circle-tile::after {
+  content: ''; /* Required for the pseudo-element */
+  position: absolute; /* Position absolute to overlay on the square */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width of the square */
+  height: 100%; /* Full height of the square */
+  border-radius: 50%; /* Make it circular */
+  background: transparent; /* Transparent background */
+  z-index: 0; /* Ensure it is below the patterned background */
+}
+
+.component-list {
+  height: 396px;
+  overflow-y: auto;
+  border: 1px solid black;
+  margin-top: 3px;
+}
+.component-item {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.component-image {
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid grey;
+  border-right: 1px solid grey;
+  /* border-radius: 1.5px; */
+}
+
+.component-image-border {
+  border: 1px solid black;
+  border-radius: 1.5px;
+  margin: 1px;
+}
+
+.component-name {
+  padding: 2px;
+  font-weight: bold;
+  align-content: center;
+}

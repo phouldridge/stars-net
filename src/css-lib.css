@@ -25,11 +25,15 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 10px;
-  font-weight: 500;
+  font-weight: 700;
   background: silver;
 }
 svg {
   transform: translate(0, 0);
+}
+.app {
+  display: flex;
+  flex-direction: column;
 }
 .game-container {
   width: 100%;
@@ -69,24 +73,36 @@ svg {
   overflow: auto;
   height: 400px;
   width: 100%;
+  font-weight: 300;
 }
 .map-tools {
+  padding-top: 3px;
+  padding-left: 3px;
   display: flex;
   flex-direction: row;
   border: inset 1px;
+  gap: 6px;
 }
 .button-toggle {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
+  border-radius: 3px;
+  margin: 1px;
 }
 .button-toggle:hover {
   background: #aaa;
 }
 .on {
-  border: inset 1px;
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
 }
 .off {
-  border: outset 1px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid grey;
+  border-right: 1px solid grey;
 }
 .star-text {
   fill: white;
@@ -174,6 +190,25 @@ svg {
   margin-top: 3px;
   flex: 1;
 }
+.close-button {
+  width: 16px;
+  height: 16px;
+  border: 1px outset;
+  background-color: #cccccc;
+  background-image: url('images/close.png');
+}
+.radio-checked {
+  width: 13px;
+  height: 13px;
+  margin: 1px;
+  background-image: url('images/radio-checked.png');
+}
+.radio-unchecked {
+  width: 13px;
+  height: 13px;
+  margin: 1px;
+  background-image: url('images/radio-unchecked.png');
+}
 div[aria-label='collapse']:hover {
   background: #aaa;
 }
@@ -189,7 +224,7 @@ select {
   background: silver;
   border: 1px outset;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0px;
   margin-top: 2px;
   padding: 0.25em;
@@ -205,6 +240,7 @@ button {
   box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
   font-family: inherit;
   font-size: 10px;
+  font-weight: 700;
   margin: 2px;
   padding: 0.25em 1em;
   width: 72px;

@@ -9,6 +9,7 @@ import reportReducer from './report'
 import selectReducer from './select'
 import serverReducer from './server'
 import messagesReducer from './messages'
+import shipsReducer from './ships'
 
 const rootReducer = combineReducers({
   app: appReducer,
@@ -18,7 +19,8 @@ const rootReducer = combineReducers({
   report: reportReducer,
   select: selectReducer,
   server: serverReducer,
-  messages: messagesReducer
+  messages: messagesReducer,
+  ships: shipsReducer
 })
 
 const epicMiddleware = createEpicMiddleware()
